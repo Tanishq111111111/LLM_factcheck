@@ -24,6 +24,17 @@ retrieval:
   max_chunks_per_question: 200
   max_questions:
 
+rag:
+  retrieval_path: results/runs/bm25__triviaqa_pilot_v1__top5.csv
+  provider: openai
+  model_name: gpt-5.4-mini
+  max_passages: 5
+  max_passage_chars: 1200
+  max_output_tokens: 96
+  retry_max_output_tokens: 1024
+  reasoning_effort: low
+  max_questions:
+
 outputs:
   runs_dir: results/runs
   tables_dir: results/tables

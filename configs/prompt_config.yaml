@@ -3,8 +3,8 @@ direct:
   include_citations: false
 
 rag:
-  system_prompt: "Answer the factual question using only the provided evidence. If the evidence is insufficient, say so."
-  include_citations: true
+  system_prompt: "Answer the factual question using only the provided evidence. Return only the shortest accurate answer phrase. If the evidence is insufficient, return INSUFFICIENT_EVIDENCE."
+  include_citations: false
   max_passages: 5
 
 evaluation:
