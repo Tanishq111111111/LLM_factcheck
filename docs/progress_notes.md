@@ -4,11 +4,11 @@ This file tracks the project at a practical level: goal, completed work, current
 
 ## Current Status
 
-- Current phase: early comparison experiments.
+- Current phase: post-review analysis and final artifact preparation.
 - Active dataset: TriviaQA pilot benchmark.
 - Current benchmark size: 100 questions.
-- Completed systems: direct LLM pilot, BM25 retrieval baseline, BM25-grounded RAG pilot.
-- Next priority: create comparison reports, add manual review labels, then scale direct and RAG from 10 questions to 100.
+- Completed systems: direct LLM baseline, BM25 retrieval baseline, BM25-grounded RAG baseline.
+- Next priority: prepare final visual/report artifacts from the completed 100-question analysis.
 
 ## Step 1: Project Setup
 
@@ -69,9 +69,47 @@ This file tracks the project at a practical level: goal, completed work, current
 - Current limitation: some answers are semantically close but evaluated harshly, such as morphology or over-specific answers.
 - Next change: add manual review labels before changing automated scoring rules.
 
+## Step 8: Pilot Comparison and Manual Review
+
+- Goal: compare direct, BM25, and RAG outputs in one reproducible table.
+- Achieved: generated `pilot10_direct_vs_rag_comparison.csv`.
+- Achieved: generated and labeled `pilot10_manual_review_candidates.csv`.
+- Result: RAG fixed 2 cases, regressed 2 cases, and left 1 ambiguous partial case.
+- Finding: the first RAG prompt sometimes refused despite retrieved evidence and sometimes returned over-complete answers.
+- Finding: a tuned prompt was tested but reduced normalized EM from 0.70 to 0.50 and lost the Super Mario Bros. fix.
+- Next change: keep the original RAG prompt for scaling, and treat prompt v2 as a failed tuning experiment.
+
+## Step 9: 100-Question Direct vs RAG Comparison
+
+- Goal: test whether retrieval grounding improves reliability beyond the 10-question smoke run.
+- Achieved: completed direct and RAG runs over all 100 TriviaQA pilot questions.
+- Direct result: normalized exact match 0.66 and mean token F1 0.784048.
+- RAG result: normalized exact match 0.69 and mean token F1 0.803024.
+- BM25 result: gold support@5 remained 0.90 across the 100-question benchmark.
+- Finding: RAG modestly improved aggregate performance, fixing 10 cases and improving 2 partial cases, but regressed 9 cases.
+- Achieved: manually validated the 41 flagged comparison rows using the pre-labeled review draft.
+- Review result: most review cases involve wrong granularity, incorrect entities, evidence-use failure, or over-complete answers.
+- Next change: use the manual review summary to support final error analysis and decide groundedness/hallucination scoring.
+
+## Step 10: Groundedness and Reliability Analysis
+
+- Goal: move beyond answer accuracy and estimate whether RAG answers are supported by retrieved evidence.
+- Achieved: finalized the 41-row manual review file as human verified.
+- Achieved: generated a RAG groundedness proxy over all 100 pilot rows.
+- Result: RAG answer support by lexical evidence overlap was 0.79 across all rows and 0.840426 across answered rows.
+- Result: unsupported-answer proxy rate was 0.15.
+- Finding: 6 rows were supported by retrieved evidence but still incorrect, showing that retrieval can surface the right context while generation still chooses the wrong answer.
+- Finding: RAG refused in 4 rows even though BM25 had top-k gold support.
+- Next change: use these outputs to build final figures and the written results narrative.
+
+## Step 11: Report-Ready Artifacts
+
+- Goal: convert experiment outputs into tables and figures that can be used in the final report or presentation.
+- Achieved: regenerated `pilot100_results_summary.md` with direct, BM25, RAG, manual-review, and groundedness findings.
+- Achieved: generated figures for metric comparison, manual-review error types, and groundedness buckets.
+- Next change: write the final narrative explaining when retrieval helped, when it failed, and what the limitations are.
+
 ## Immediate Next Moves
 
-- Build a comparison report that joins direct, BM25, and RAG outputs.
-- Create a manual review CSV for changed or failed cases.
-- Use the comparison report to decide whether prompt tuning, retrieval tuning, or metric refinement should happen before scaling to 100 questions.
-- After review, run direct and RAG over all 100 questions.
+- Add a short results narrative for the final report.
+- Consider a small dashboard only after final static figures are ready.

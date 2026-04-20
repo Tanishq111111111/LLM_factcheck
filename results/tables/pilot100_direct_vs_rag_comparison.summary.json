@@ -1,0 +1,19 @@
+{
+  "row_count": 100,
+  "comparison_file": "C:\\Users\\tanis\\OneDrive\\Desktop\\LLM_factcheck\\LLM_factcheck\\results\\tables\\pilot100_direct_vs_rag_comparison.csv",
+  "manual_review_file": "C:\\Users\\tanis\\OneDrive\\Desktop\\LLM_factcheck\\LLM_factcheck\\results\\manual_reviews\\pilot100_manual_review_candidates.csv",
+  "direct_normalized_exact_match": 0.66,
+  "rag_normalized_exact_match": 0.69,
+  "direct_mean_token_f1": 0.784048,
+  "rag_mean_token_f1": 0.803024,
+  "mean_token_f1_delta_rag_minus_direct": 0.018976,
+  "outcome_counts": {
+    "unchanged": 79,
+    "rag_fixed": 10,
+    "rag_regressed": 7,
+    "rag_regressed_to_incorrect": 2,
+    "rag_improved_partial": 2
+  },
+  "manual_review_count": 41,
+  "bm25_support_rate": 0.9
+}

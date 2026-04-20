@@ -1,0 +1,4 @@
+system,normalized_exact_match,mean_token_f1,support_at_5,answer_support_rate,unsupported_answer_proxy_rate,notes
+Direct LLM,0.660000,0.784048,,,,No retrieved evidence
+BM25 Retrieval,,,0.900000,,,Gold answer appears in top-5 retrieved passages
+BM25 + RAG,0.690000,0.803024,,0.790000,0.150000,Uses BM25 top-5 evidence

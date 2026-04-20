@@ -1,0 +1,36 @@
+{
+  "rag_run_file": "C:\\Users\\tanis\\OneDrive\\Desktop\\LLM_factcheck\\LLM_factcheck\\results\\runs\\rag__openai__gpt-5-4-mini__bm25_top5__pilot100.csv",
+  "rag_metrics_file": "C:\\Users\\tanis\\OneDrive\\Desktop\\LLM_factcheck\\LLM_factcheck\\results\\tables\\rag-openai-gpt-5-4-mini-bm25-top5-pilot100__metrics.csv",
+  "groundedness_file": "C:\\Users\\tanis\\OneDrive\\Desktop\\LLM_factcheck\\LLM_factcheck\\results\\tables\\pilot100_rag_groundedness_analysis.csv",
+  "row_count": 100,
+  "method": "lexical_answer_overlap_with_retrieved_passages",
+  "limitations": [
+    "This is a conservative proxy, not a human factuality judgment.",
+    "It can miss paraphrased support and can count misleading lexical overlap as support."
+  ],
+  "aggregate_metrics": {
+    "gold_support_at_k": 0.9,
+    "answer_supported_rate_all_rows": 0.79,
+    "answer_supported_rate_answered_rows": 0.840426,
+    "unsupported_answer_proxy_rate_all_rows": 0.15,
+    "refused_despite_gold_support_rate": 0.04,
+    "supported_but_incorrect_rate": 0.06,
+    "supported_partial_rate": 0.14,
+    "insufficient_evidence_rate": 0.06
+  },
+  "unsupported_answer_count": 15,
+  "refused_despite_gold_support_count": 4,
+  "groundedness_bucket_counts": {
+    "supported_correct": 59,
+    "unsupported_answer_proxy": 15,
+    "supported_partial": 14,
+    "supported_but_incorrect": 6,
+    "abstained_despite_gold_support": 4,
+    "abstained_without_gold_support": 2
+  },
+  "correctness_counts": {
+    "correct": 69,
+    "partially_correct": 17,
+    "incorrect": 14
+  }
+}

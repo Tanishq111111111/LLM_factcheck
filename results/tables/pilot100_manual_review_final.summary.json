@@ -1,0 +1,33 @@
+{
+  "review_file": "C:\\Users\\tanis\\OneDrive\\Desktop\\LLM_factcheck\\LLM_factcheck\\results\\manual_reviews\\pilot100_manual_review_final.csv",
+  "row_count": 41,
+  "labeled_count": 41,
+  "unlabeled_count": 0,
+  "manual_label_counts": {
+    "both_wrong": 10,
+    "ambiguous_partial": 9,
+    "direct_partial_rag_correct": 6,
+    "direct_correct_rag_wrong": 5,
+    "direct_correct_rag_partial": 4,
+    "direct_wrong_rag_correct": 4,
+    "direct_wrong_rag_partial": 2,
+    "metric_artifact": 1
+  },
+  "error_type_counts": {
+    "wrong_granularity": 16,
+    "incorrect_entity": 9,
+    "evidence_use_failure": 7,
+    "overcomplete_answer": 4,
+    "outdated_or_context_sensitive_fact": 2,
+    "retrieval_failure": 1,
+    "metric_morphology": 1,
+    "historical_geography_ambiguity": 1
+  },
+  "comparison_outcome_counts": {
+    "unchanged": 20,
+    "rag_fixed": 10,
+    "rag_regressed": 7,
+    "rag_regressed_to_incorrect": 2,
+    "rag_improved_partial": 2
+  }
+}
