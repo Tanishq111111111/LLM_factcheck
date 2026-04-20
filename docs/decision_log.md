@@ -25,3 +25,4 @@
 - Human-validated the 41-row pre-labeled manual review draft and accepted the generated labels as accurate.
 - Added a lexical groundedness proxy for RAG outputs, while recording its limitation that lexical overlap is not equivalent to full factual support.
 - Added static report figures before dashboard work so the final deliverable has stable, presentation-ready artifacts first.
+- Added a lightweight Streamlit dashboard after completing static figures and summaries, so the UI reads finalized artifacts instead of driving the experiment workflow.

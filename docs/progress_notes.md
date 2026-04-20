@@ -109,7 +109,22 @@ This file tracks the project at a practical level: goal, completed work, current
 - Achieved: generated figures for metric comparison, manual-review error types, and groundedness buckets.
 - Next change: write the final narrative explaining when retrieval helped, when it failed, and what the limitations are.
 
+## Step 12: Final Narrative Drafting
+
+- Goal: turn the completed experiment into a clear final-report and presentation structure.
+- Achieved: drafted `docs/final_report_draft.md` with abstract, research question, methods, results, groundedness analysis, manual error analysis, limitations, and future work.
+- Achieved: drafted `docs/presentation_outline.md` with a slide-by-slide structure and key talking points.
+- Next change: revise the report for course formatting requirements and add formal references if required.
+
+## Step 13: Dashboard
+
+- Goal: make the completed pilot easy to inspect interactively.
+- Achieved: replaced the placeholder Streamlit app with a dashboard that loads the 100-row comparison, final manual review, groundedness analysis, and optional RAG evidence passages.
+- Achieved: added tabs for overview metrics, question-level inspection, manual-review breakdowns, and groundedness buckets.
+- Next change: polish layout only if the dashboard becomes part of the final submission; otherwise static figures and report tables are enough.
+
 ## Immediate Next Moves
 
-- Add a short results narrative for the final report.
-- Consider a small dashboard only after final static figures are ready.
+- Revise the final report draft against the assignment rubric.
+- Add references/citations if the final submission requires them.
+- If needed, polish the dashboard for presentation screenshots.

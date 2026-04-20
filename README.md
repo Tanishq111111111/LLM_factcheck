@@ -55,6 +55,14 @@ OpenAI runs also require setting `OPENAI_API_KEY` in the same `cmd` window befor
 set OPENAI_API_KEY=your_actual_api_key_here
 ```
 
+## Dashboard
+
+After the pilot result files exist, run the Streamlit dashboard from the repo root:
+
+```cmd
+.venv\Scripts\python.exe -m streamlit run app\streamlit_app.py
+```
+
 ## Project Layout
 
 ```text
@@ -68,4 +76,4 @@ llm-factcheck/
 `-- src/
 ```
 
-See `docs/progress_notes.md` for the current project state, `docs/decision_log.md` for major choices, and `results/tables/pilot100_results_summary.md` for the latest report-ready results.
+See `docs/progress_notes.md` for the current project state, `docs/decision_log.md` for major choices, `results/tables/pilot100_results_summary.md` for the latest report-ready results, and `docs/final_report_draft.md` for the current written report draft.
