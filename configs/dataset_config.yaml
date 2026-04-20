@@ -1,0 +1,16 @@
+dataset:
+  name: trivia_qa
+  config_name: rc
+  pilot_split: train
+  pilot_sample_size: 100
+  random_seed: 42
+  top_search_results: 3
+  top_entity_pages: 2
+
+fields:
+  question: question
+  answer: answer
+  evidence: search_results
+
+notes:
+  verify_schema_after_inspection: true

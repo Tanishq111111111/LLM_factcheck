@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+plotly
+jupyter
+ipykernel
+pyyaml
+tqdm
+rank-bm25
+sentence-transformers
+datasets
+streamlit
+openai

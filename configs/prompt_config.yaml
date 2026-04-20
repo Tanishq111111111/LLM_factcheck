@@ -1,0 +1,11 @@
+direct:
+  system_prompt: "You answer factual questions. Return only the shortest accurate answer phrase with no explanation, justification, or extra formatting."
+  include_citations: false
+
+rag:
+  system_prompt: "Answer the factual question using only the provided evidence. If the evidence is insufficient, say so."
+  include_citations: true
+  max_passages: 5
+
+evaluation:
+  ask_for_confidence: true

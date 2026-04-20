@@ -1,0 +1,40 @@
+run:
+  name: triviaqa_pilot_v1
+  seed: 42
+
+direct:
+  benchmark_path: data/benchmark/triviaqa_pilot_v1.csv
+  provider: openai
+  model_name: gpt-5.4-mini
+  temperature: 0.0
+  max_output_tokens: 96
+  retry_max_output_tokens: 1024
+  reasoning_effort: low
+  max_questions:
+
+evaluation:
+  benchmark_path: data/benchmark/triviaqa_pilot_v1.csv
+  partial_f1_threshold: 0.5
+
+outputs:
+  runs_dir: results/runs
+  tables_dir: results/tables
+  figures_dir: results/figures
+  reviews_dir: results/manual_reviews
+
+metrics:
+  - exact_match
+  - normalized_exact_match
+  - token_f1
+  - groundedness
+  - hallucination_rate
+
+labels:
+  correctness:
+    - correct
+    - partially_correct
+    - incorrect
+  risk:
+    - low
+    - medium
+    - high
