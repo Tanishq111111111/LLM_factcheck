@@ -16,6 +16,14 @@ evaluation:
   benchmark_path: data/benchmark/triviaqa_pilot_v1.csv
   partial_f1_threshold: 0.5
 
+retrieval:
+  benchmark_path: data/benchmark/triviaqa_pilot_v1.csv
+  top_k: 5
+  chunk_size: 120
+  overlap: 30
+  max_chunks_per_question: 200
+  max_questions:
+
 outputs:
   runs_dir: results/runs
   tables_dir: results/tables
